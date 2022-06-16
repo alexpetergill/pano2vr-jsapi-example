@@ -43,7 +43,11 @@
 			window.addEventListener("load", function() {
 				pano.readConfigUrlAsync("pano.xml");
 
-				pano.getHotspot('Point01').div.addEventListener('click', () => alert('clicked!'));
+
+
+				pano.on("imagesready", function() {
+					pano.getHotspot('Point01').div.addEventListener('click', () => alert('clicked!'));
+				});
 			});
 		</script>
 		<noscript>
