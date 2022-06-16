@@ -14,7 +14,7 @@
 				margin: 0px;
 				overflow:hidden; /* disable scrollbars */
 			}
-			/* fix for scroll bars on webkit & >= Mac OS X Lion */ 
+			/* fix for scroll bars on webkit & >= Mac OS X Lion */
 			::-webkit-scrollbar {
 				background-color: rgba(0,0,0,0.5);
 				width: 0.75em;
@@ -22,10 +22,10 @@
 			::-webkit-scrollbar-thumb {
     			background-color:  rgba(255,255,255,0.5);
 			}
-		</style>	
+		</style>
 	</head>
 	<body>
-	<!-- -----------8<----------- cut here -----------8<----------- --> 
+	<!-- -----------8<----------- cut here -----------8<----------- -->
 		<script type="text/javascript" src="pano2vr_player.js">
 		</script>
 		<script type="text/javascript" src="skin.js">
@@ -42,11 +42,13 @@
 			// load the configuration
 			window.addEventListener("load", function() {
 				pano.readConfigUrlAsync("pano.xml");
+
+				pano.getHotspot('Point01').div.addEventListener('click', () => alert('clicked!'));
 			});
 		</script>
 		<noscript>
 			<p><b>Please enable Javascript!</b></p>
 		</noscript>
-	<!-- -----------8<----------- cut here -----------8<----------- --> 
+	<!-- -----------8<----------- cut here -----------8<----------- -->
 	</body>
 </html>
